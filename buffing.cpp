@@ -42,7 +42,7 @@ int main()
 		//均值滤波
 		cv::GaussianBlur(rFrame, medMat, cv::Size(7, 7), 3, 3);
 
-		//利用mask磨皮
+		//利用mask只对人脸磨皮
 		rFrame.copyTo(bufMat);
 		medMat.copyTo(bufMat, detectMat);
 
